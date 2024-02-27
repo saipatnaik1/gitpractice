@@ -20,8 +20,7 @@ steps:
             --machine-type=e2-medium \
             --service-account=sai-120@sai-vizag-test.iam.gserviceaccount.com \
             --scopes=https://www.googleapis.com/auth/cloud-platform \
-            --source-machine-image=$(cat _IMAGE) \
-            --metadata=startup-script-url=gs://tst-bkt-1/startup-script.sh
+            --source-machine-image=projects/sai-vizag-test/global/images/$(cat _IMAGE) 
         else 
           echo "os not supported" 
         fi 
