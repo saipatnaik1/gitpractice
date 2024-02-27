@@ -21,8 +21,9 @@ steps:
             --service-account=sai-120@sai-vizag-test.iam.gserviceaccount.com \
             --scopes=https://www.googleapis.com/auth/cloud-platform \
             --source-machine-image=projects/sai-vizag-test/global/images/$(cat _IMAGE) 
+          echo "VM instance created using machine image: $(cat _IMAGE)"
         else 
-          echo "os not supported" 
+          echo "OS not supported" 
         fi 
     entrypoint: bash
 options:
